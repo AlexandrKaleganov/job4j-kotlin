@@ -16,7 +16,8 @@ data class Item(var id: String = "", var name: String = "", var desc: String = "
 
     fun getComments() = comments
     fun getCreated() = created
-    
+
+
     private fun createdSet() {
         this.created = System.currentTimeMillis();
     }
