@@ -5,7 +5,7 @@ import io.kotlintest.specs.StringSpec
 
 internal class ItemTest : StringSpec({
     "setId('1'); getId() = '1'" {
-        val item = Item(id="1")
+        val item = Item(id ="1")
         item.id shouldBe "1"
     }
     "setName('vasia'); getName() = 'vasia'" {

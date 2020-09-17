@@ -6,11 +6,17 @@ import kotlin.collections.ArrayList
 
 class Tracker {
     private val items = ArrayList<Item>()
+    private var isExit: Boolean = true
 
     fun addItem(item: Item): Item {
         item.id = items.size.toString()
         items.add(item)
         return item
+    }
+
+    fun isExit() = isExit
+    fun exit() {
+        isExit = false
     }
 
     fun addComment(id: String, comment: String) {
