@@ -8,7 +8,7 @@ class Tracker {
     private val items = ArrayList<Item>()
 
     fun addItem(item: Item): Item {
-        item.setId(items.size.toString())
+        item.id = items.size.toString()
         items.add(item)
         return item
     }
@@ -31,7 +31,7 @@ class Tracker {
 
     fun findAllByName(name: String): List<Item> {
         return items.stream().filter { item ->
-            item.getName() == name
+            item.name == name
         }.collect(Collectors.toList())
     }
 }

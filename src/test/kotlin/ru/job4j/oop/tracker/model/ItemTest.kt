@@ -5,19 +5,16 @@ import io.kotlintest.specs.StringSpec
 
 internal class ItemTest : StringSpec({
     "setId('1'); getId() = '1'" {
-        val item = Item()
-        item.setId("1")
-        item.getId() shouldBe "1"
+        val item = Item(id="1")
+        item.id shouldBe "1"
     }
     "setName('vasia'); getName() = 'vasia'" {
-        val item = Item()
-        item.setName("vasia")
-        item.getName() shouldBe "vasia"
+        val item = Item(name = "vasia")
+        item.name shouldBe "vasia"
     }
     "setDesc('desc'); getDesc() = 'desc'" {
-        val item = Item()
-        item.setDesc("desc")
-        item.getDesc() shouldBe "desc"
+        val item = Item(desc = "desc")
+        item.desc shouldBe "desc"
     }
     "addComment('comment'); getComment().size = 1" {
         val item = Item()
