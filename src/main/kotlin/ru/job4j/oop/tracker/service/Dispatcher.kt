@@ -6,7 +6,7 @@ import ru.job4j.oop.tracker.model.Item
 import java.util.function.BiConsumer
 
 object Dispatcher {
-    var commandList: HashMap<Int, BiConsumer<Input, Tracker>> = HashMap()
+    private var commandList: HashMap<Int, BiConsumer<Input, Tracker>> = HashMap()
 
     init {
         commandList.put(0) { input, tracker ->

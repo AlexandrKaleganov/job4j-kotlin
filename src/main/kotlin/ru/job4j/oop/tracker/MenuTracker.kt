@@ -15,10 +15,7 @@ class MenuTracker {
     }
 
     fun getMenu() = actions
-    fun select(key: Int, input:Input, tr:Tracker) {
-        println(key)
-        Dispatcher.execute(key, input, tr)
-    }
+    fun select(key: Int, input:Input, tr:Tracker) = Dispatcher.execute(key, input, tr)
 
     fun showMenu(out: Consumer<String>) {
         actions.forEach { e -> out.accept( e.toString() ) }

@@ -23,21 +23,14 @@ class Tracker {
         findById(id).addComment(comment)
     }
 
-    fun findById(id: String): Item {
-        return items[Integer.valueOf(id)]
-    }
+    fun findById(id: String) = items[Integer.valueOf(id)]
 
-    fun deleteItemById(id: String): Item {
-        return items.removeAt(Integer.valueOf(id))
-    }
+    fun deleteItemById(id: String) = items.removeAt(Integer.valueOf(id))
 
-    fun findAll(): ArrayList<Item> {
-        return items
-    }
+    fun findAll(): ArrayList<Item>  = items
 
-    fun findAllByName(name: String): List<Item> {
-        return items.stream().filter { item ->
+    fun findAllByName(name: String): MutableList<Item> = 
+         items.stream().filter { item ->
             item.name == name
         }.collect(Collectors.toList())
-    }
 }
