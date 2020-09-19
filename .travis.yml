@@ -1,0 +1,28 @@
+language: java
+install: skip
+
+os: linux
+dist: trusty
+jdk: oraclejdk8
+
+script:
+  - ./gradlew build --scan -s
+before_cache:
+  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+
+# после выполнения сборки запустить скрипт, который будет собирать статистику по JaCoCo
+# Здесь используется сторонни сервис https://codecov.io/
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+# Отправлять уведомление на почту alexmur07@mail.ru (Изменить на свою) если сборка упала
+notifications:
+  email:
+    recipients:
+      - alexmur07@mail.ru
+    on_success: never # default: change
+    on_failure: always # default: always
