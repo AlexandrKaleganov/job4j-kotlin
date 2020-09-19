@@ -18,6 +18,7 @@ cache:
 # Здесь используется сторонни сервис https://codecov.io/
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+CODECOV_TOKEN="709e473c-68c5-4275-a8be-0629c7f8be76"
 
 # Отправлять уведомление на почту alexmur07@mail.ru (Изменить на свою) если сборка упала
 notifications:
