@@ -8,7 +8,7 @@ import ru.job4j.oop.tracker.model.Item
 internal class TrackerTest : StringSpec({
 
     "Tracker().addItem(Item()).getId() = '0'" {
-        Tracker().addItem(Item()).id shouldBe "0"
+        Tracker().addItem(Item()).id.equals("") shouldBe false
     }
 
     "tr.addComment('0', 'comment') tr.findAll()[0].getComments()[0]= 'comment'" {
@@ -25,8 +25,8 @@ internal class TrackerTest : StringSpec({
 
     "deleteItemById()  findAll().size  = '0'" {
         val tr = Tracker()
-        tr.addItem(Item())
-        tr.deleteItemById("0")
+        val it = tr.addItem(Item())
+        tr.deleteItemById(it.id)
         tr.findAll().size shouldBe 0
     }
 

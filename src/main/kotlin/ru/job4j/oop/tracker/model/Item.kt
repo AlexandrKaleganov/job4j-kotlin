@@ -7,7 +7,7 @@ data class Item(var id: String = "", var name: String? = "", var desc: String? =
     private val comments = ArrayList<String>()
 
     init {
-        createdSet()
+        this.created = System.currentTimeMillis();
     }
 
     fun addComment(comment: String) {
@@ -16,10 +16,5 @@ data class Item(var id: String = "", var name: String? = "", var desc: String? =
 
     fun getComments() = comments
     fun getCreated() = created
-
-
-    private fun createdSet() {
-        this.created = System.currentTimeMillis();
-    }
 
 }
