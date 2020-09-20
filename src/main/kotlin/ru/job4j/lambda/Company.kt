@@ -1,6 +1,6 @@
 package ru.job4j.lambda
 
-import java.util.*
+import java.time.LocalDate
 
-data class Company(val name: String, val address: Address, val created: Date) {
+data class Company(val name: String, val address: Address, val created: LocalDate) {
 }
