@@ -6,8 +6,7 @@ class HtmlTable {
         table.apply {
             append("<table>")
             for (r in 0 until row) {
-                apply {
-                    append("<tr>")
+                apply { append("<tr>")
                     for (c in 0 until cell) {
                         append("<td></td>")
                     }
