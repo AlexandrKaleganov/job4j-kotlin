@@ -13,7 +13,7 @@ class BankService {
 
     private fun findByRequisite(passport: String, requisite: String): Account? {
         val user = findByPassport(passport)
-        return users[user]?.stream()?.filter { it.requsite.equals(requisite) }
+        return users[user]?.stream()?.filter { it.requsite == requisite }
                 ?.findFirst()?.orElse(null)
     }
 
