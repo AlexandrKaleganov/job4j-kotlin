@@ -3,11 +3,11 @@ package ru.job4j.oop
 /**
  * реализация linkedList  с итератором
  */
-class SimpleLinkedList<T> : Iterable<T> {
+class SimpleLinkedList<T> : Iterable<T>, ListIterator<T> {
     private var first: Node<T>? = null
     private var last: Node<T>? = null
     private var size = 0
-
+    private var index = 0;
     override fun iterator() = LinkedIt()
     fun add(value: T) {
         addLast(value)
@@ -39,7 +39,7 @@ class SimpleLinkedList<T> : Iterable<T> {
         this.last = newLink
     }
 
-    fun get(index: Int): T? {
+    fun get(index: Int): T {
         var result: Node<T>? = null
         if (isCheck(index)) {
             result = first
@@ -52,7 +52,9 @@ class SimpleLinkedList<T> : Iterable<T> {
                 result = last?.prev
             }
         }
-        return result?.value
+        if (result != null)
+            return result.value else throw IndexOutOfBoundsException("данного индекса не существует или вы вывалились за пределы массива")
+
     }
 
     /**
@@ -167,4 +169,27 @@ class SimpleLinkedList<T> : Iterable<T> {
     }
 
     class Node<T>(val value: T, var prev: Node<T>? = null, var next: Node<T>? = null)
+
+    override fun hasNext() = index in 0 until size
+
+    override fun hasPrevious() = index in 1..size
+
+    override fun next(): T {
+        if (!hasNext()) {
+            throw NoSuchElementException()
+        }
+        return get(index++)
+    }
+
+    override fun nextIndex() = index
+
+    override fun previous(): T {
+        if (hasPrevious() || get(index) == null) {
+            throw NoSuchElementException()
+        } else {
+            return get(index--)
+        }
+    }
+
+    override fun previousIndex() = index - 1
 }
