@@ -13,13 +13,15 @@ class BankService {
 
     private fun findByRequisite(passport: String, requisite: String): Account? {
         val user = findByPassport(passport)
-        return users[user]?.stream()?.filter { it.requsite == requisite }
-                ?.findFirst()?.orElse(null)
+        return user?.let {
+            users[user]?.stream()?.filter { it.requsite == requisite }
+                    ?.findFirst()?.orElse(null)
+        }
     }
 
     fun addAccount(passport: String?, account: Account?) {
-        val user = findByPassport(passport) ?: return
-        users[user]!!.add(account!!)
+        val user = findByPassport(passport)
+        account?.let { users[user]?.add(account) }
     }
 
 
@@ -32,10 +34,10 @@ class BankService {
         return null
     }
 
-    fun transferMoney(srcPassport: String?, srcRequisite: String?,
-                      destPassport: String?, descRequisite: String?, amount: Double): Boolean {
-        val source = findByRequisite(srcPassport!!, srcRequisite!!)
-        val dest = findByRequisite(destPassport!!, descRequisite!!)
+    fun transferMoney(srcPassport: String, srcRequisite: String,
+                      destPassport: String, descRequisite: String, amount: Double): Boolean {
+        val source = findByRequisite(srcPassport, srcRequisite)
+        val dest = findByRequisite(destPassport, descRequisite)
         val rsl = source != null && dest != null
         if (rsl) {
             source?.balance = source?.balance?.minus(amount)!!
