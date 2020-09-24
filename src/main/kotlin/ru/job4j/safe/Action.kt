@@ -4,13 +4,15 @@ import java.time.LocalDate
 
 class Action(var valuta: String, date: LocalDate, var name: String? = null) {
 
-    fun equals(other: Action?): Boolean {
+    override fun equals(other: Any?): Boolean {
+        if (other == null) return false else
         if (this === other) {
             return true
         }
         if (this.javaClass != other?.javaClass) {
             return false
         }
+        other as Action
         if (name != other.name) {
             return false
         }
@@ -28,6 +30,8 @@ class Action(var valuta: String, date: LocalDate, var name: String? = null) {
         result = 31 * result + valuta.hashCode()
         return result
     }
+
+
 }
 
 fun main() {
