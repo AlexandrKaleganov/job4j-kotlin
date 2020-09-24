@@ -6,7 +6,7 @@ class StartUI {
         private val menuTracker: MenuTracker = MenuTracker()
         private val tracker: Tracker = Tracker()
 //        private val input1: Input = ConsoleInput()
-        private val input1: Input = StubInput(arrayOf("0", "test name", "desc", "2"))
+        private val input1: Input = StubInput(arrayOf("0", "test name", "desc", "1",  "2"))
 
         @JvmStatic
         fun main(args: Array<String>) {
