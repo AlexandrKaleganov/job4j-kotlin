@@ -5,7 +5,8 @@ class StartUI {
     companion object {
         private val menuTracker: MenuTracker = MenuTracker()
         private val tracker: Tracker = Tracker()
-        private val input: Input = ConsoleInput()
+//        private val input1: Input = ConsoleInput()
+        private val input1: Input = StubInput(arrayOf("0", "test name", "desc", "2"))
 
         @JvmStatic
         fun main(args: Array<String>) {
@@ -15,7 +16,7 @@ class StartUI {
         private fun start() {
             do {
                 menuTracker.showMenu(System.out::println)
-                menuTracker.select(input.inputCommand("Select:", menuTracker.getMenu().size - 1), input, tracker)
+                menuTracker.select(input1.inputCommand("Select:", menuTracker.getMenu().size - 1), input1, tracker)
             } while (tracker.isExit())
         }
     }

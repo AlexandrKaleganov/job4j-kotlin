@@ -1,7 +1,8 @@
 package ru.job4j.oop.tracker
 
-class StubInput: Input {
-    override fun inputCommand(command: String?) = command
+class StubInput(private val values:Array<String>): Input {
+    var position = 0
+    override fun inputCommand(command: String?) = values[position++]
 
     override fun inputCommand(command: String?, range: Int): Int {
         val key = Integer.valueOf(this.inputCommand(command))
