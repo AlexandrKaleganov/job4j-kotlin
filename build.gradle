@@ -1,22 +1,34 @@
 plugins {
     id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.4.0'
+    id("org.jetbrains.dokka") version "1.4.0"
     id 'jacoco'
 }
 
 group 'ru.job4j'
 version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    jcenter()
+
 }
 test {
     useJUnitPlatform()
 }
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib"
-    implementation 'org.junit.jupiter:junit-jupiter:5.4.2'
-    implementation 'org.junit.jupiter:junit-jupiter:5.4.2'
-    testCompile group: 'junit', name: 'junit', version: '4.12', 'io.kotlintest:kotlintest-runner-junit5:3.3.2'
-    runtime "ch.qos.logback:logback-classic:1.2.3"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    testImplementation 'io.kotlintest:kotlintest-runner-junit5:3.3.2'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.21'
+    compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.7.0'
+    testCompile ('org.junit.jupiter:junit-jupiter:5.7.0')
+    compile('com.h2database:h2:1.4.200')
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
 }
