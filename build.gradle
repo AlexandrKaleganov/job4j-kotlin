@@ -22,8 +22,16 @@ dependencies {
     testImplementation 'io.kotlintest:kotlintest-runner-junit5:3.3.2'
     compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.21'
     compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.7.0'
-    testCompile ('org.junit.jupiter:junit-jupiter:5.7.0')
-    compile('com.h2database:h2:1.4.200')
+    compile 'org.jsoup:jsoup:1.8.3'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.8.9'
+//    compile 'com.fasterxml.jackson.core:jackson-databind:2.8.9'
+    compile 'com.fasterxml.jackson.module:jackson-module-kotlin:2.9.8'
+
+
+    compile 'com.fasterxml.jackson.core:jackson-core:2.2.+'
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.2.+'
+    testCompile('org.junit.jupiter:junit-jupiter:5.7.0')
+    testCompile('com.h2database:h2:1.4.200')
 }
 
 compileKotlin {
