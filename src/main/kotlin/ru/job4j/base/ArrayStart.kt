@@ -1,5 +1,7 @@
 package ru.job4j.base
 
+import ru.job4j.condition.Driver
+
 /**
  * 1. Реализуйте метод fun defragment(array: Array<String?>) ,
  * который будет перемещать заполненные ячейки массива в начало, а пустые в конец.
