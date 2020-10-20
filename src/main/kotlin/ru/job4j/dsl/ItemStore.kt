@@ -5,7 +5,7 @@ object ItemStore : Store<Item> {
     private val items = ArrayList<Item>()
 
     override fun addItem(item: Item): Item {
-        this.items.add(item)
+        items.add(item)
         return item
     }
 
