@@ -9,7 +9,7 @@ class Action(var valuta: String, date: LocalDate, var name: String? = null) {
         if (this === other) {
             return true
         }
-        if (this.javaClass != other?.javaClass) {
+        if (this.javaClass != other.javaClass) {
             return false
         }
         other as Action
