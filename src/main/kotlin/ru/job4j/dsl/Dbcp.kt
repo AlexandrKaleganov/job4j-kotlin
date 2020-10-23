@@ -2,6 +2,10 @@ package ru.job4j.dsl
 
 import org.apache.commons.dbcp2.BasicDataSource
 
+/**
+ * класс наследуется от {@link BasicDataSource}   и принимает в конструктор
+ * драйвер, урл, логин и пароль
+ */
 class Dbcp(
     private val driver: String?, private val dataUrl: String?, private val login: String?,
     private val pass: String?, private val min: Int, private val max: Int, private val mT: Int
@@ -12,10 +16,6 @@ class Dbcp(
       url = dataUrl
       username = login
       password = pass
-//      maxTotal = mT
-//      minIdle = min
-//      maxIdle = max
-//      autoCommitOnReturn = true
     }
 
     companion object Builder {

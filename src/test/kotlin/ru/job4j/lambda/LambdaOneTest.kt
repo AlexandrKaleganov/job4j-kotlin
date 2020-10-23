@@ -2,6 +2,10 @@ package ru.job4j.lambda
 
 import io.kotlintest.shouldBe
 import io.kotlintest.specs.StringSpec
+
+/**
+ * тестирование функций
+ */
 internal class LambdaOneTest: StringSpec({
     "inc" {
        inc(1) shouldBe 2

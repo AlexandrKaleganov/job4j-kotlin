@@ -6,6 +6,9 @@ import io.kotlintest.specs.StringSpec
 import java.time.LocalDate
 import java.util.*
 
+/**
+ * тест маппинга списка объектов в стрингу
+ */
 internal class CompanyTest : StringSpec({
     "mapCompanyToString" {
         val companies = listOf(Company("seagate", Address("Тайвань"), LocalDate.of(2020, 11, 14)),

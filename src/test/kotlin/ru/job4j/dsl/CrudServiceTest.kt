@@ -3,6 +3,9 @@ package ru.job4j.dsl
 import io.kotlintest.shouldBe
 import io.kotlintest.specs.StringSpec
 
+/**
+ * тестирование CRUD на уровне сессии
+ */
 class CrudServiceTest : StringSpec({
     "INIT TABLE" {
         val k: Long = 0L
