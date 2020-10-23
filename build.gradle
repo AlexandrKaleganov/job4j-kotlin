@@ -27,7 +27,7 @@ dependencies {
     compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.7.0'
     compile 'com.fasterxml.jackson.module:jackson-module-kotlin:2.9.8'
     compile 'org.apache.cassandra:cassandra-all:0.8.1'
-
+    compile ('org.junit.jupiter:junit-jupiter:5.7.0')
     compile 'com.fasterxml.jackson.core:jackson-core:2.2.+'
     compile 'com.fasterxml.jackson.core:jackson-annotations:2.2.+'
     testCompile('org.junit.jupiter:junit-jupiter:5.7.0')
