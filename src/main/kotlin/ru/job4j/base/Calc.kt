@@ -1,5 +1,8 @@
 package ru.job4j.base
 
+/**
+ * класс калькулятор
+ */
 fun additions(firs: Int, second: Int): Int {
     return firs + second;
 }

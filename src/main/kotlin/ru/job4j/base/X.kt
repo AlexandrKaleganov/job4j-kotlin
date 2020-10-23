@@ -1,5 +1,7 @@
 package ru.job4j.base
-
+/*
+* метод рисует X
+ */
 fun draw(size: Int) {
     if (isValidSize(size))
         for (value in 0 until size) {

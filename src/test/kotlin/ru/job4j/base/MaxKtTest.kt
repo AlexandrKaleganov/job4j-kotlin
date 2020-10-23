@@ -2,6 +2,10 @@ package ru.job4j.base
 
 import io.kotlintest.shouldBe
 import io.kotlintest.specs.StringSpec
+
+/**
+ * тестирование максимального числа
+ */
 internal class MaxKtTest : StringSpec({
     "1 or 2 = 2" {
         max(1, 2) shouldBe 2
