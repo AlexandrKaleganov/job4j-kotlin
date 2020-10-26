@@ -3,7 +3,13 @@ package ru.job4j.safe
 import java.time.LocalDate
 
 /**
- *    other as Action  equals and hashCode
+ * Action
+ * other as Action  equals and hashCode
+ * @property valuta
+ * @property name
+ * @constructor
+ *
+ * @param date
  */
 class Action(var valuta: String, date: LocalDate, var name: String? = null) {
 
