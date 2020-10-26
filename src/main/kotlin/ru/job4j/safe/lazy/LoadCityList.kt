@@ -4,6 +4,9 @@ import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import org.jsoup.Jsoup
 
+/**
+ * ленивая загрука списка городов
+ */
 class LoadCityList {
      val cityList: List<City> by lazy { getList() }
 

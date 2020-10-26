@@ -1,6 +1,6 @@
 package ru.job4j.base
 /*
-* метод рисует X
+* метод рисует X исходя из размеров
  */
 fun draw(size: Int) {
     if (isValidSize(size))

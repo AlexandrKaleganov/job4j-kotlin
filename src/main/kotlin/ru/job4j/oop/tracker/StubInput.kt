@@ -1,5 +1,8 @@
 package ru.job4j.oop.tracker
 
+/**
+ * класс реализует интерфейс ввода , который обрабатывает строки
+ */
 class StubInput(private val values:Array<String>): Input {
     var position = 0
     override fun inputCommand(command: String?) = values[position++]

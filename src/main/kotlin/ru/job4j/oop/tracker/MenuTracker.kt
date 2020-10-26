@@ -4,6 +4,9 @@ import ru.job4j.oop.tracker.service.Dispatcher
 import java.util.*
 import java.util.function.Consumer
 
+/**
+ * сервис для отрисовки меню
+ */
 class MenuTracker {
     private val actions: ArrayList<UserAction> = ArrayList<UserAction>()
 

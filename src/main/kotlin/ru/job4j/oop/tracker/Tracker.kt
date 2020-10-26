@@ -5,6 +5,9 @@ import java.util.function.Function
 import java.util.stream.Collectors
 import kotlin.random.Random
 
+/**
+ * сервис CRUD  операций
+ */
 class Tracker {
     private val items = ArrayList<Item>()
     private var isExit: Boolean = true

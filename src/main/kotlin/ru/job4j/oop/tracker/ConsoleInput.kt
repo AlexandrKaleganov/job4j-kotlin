@@ -1,5 +1,8 @@
 package ru.job4j.oop.tracker
 
+/**
+ * реализация интерфейса ввода через консоль
+ */
 class ConsoleInput : Input {
     override fun inputCommand(command: String?): String? {
         println(command)

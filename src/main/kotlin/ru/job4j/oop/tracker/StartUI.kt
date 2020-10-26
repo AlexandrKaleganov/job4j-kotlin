@@ -1,5 +1,8 @@
 package ru.job4j.oop.tracker
 
+/**
+ * старт приложения
+ */
 class StartUI {
 
     companion object {

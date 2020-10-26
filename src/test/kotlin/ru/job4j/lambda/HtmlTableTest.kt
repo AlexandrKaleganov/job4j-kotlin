@@ -3,7 +3,7 @@ package ru.job4j.lambda
 import io.kotlintest.shouldBe
 import io.kotlintest.specs.StringSpec
 /*
- * тестирование метода apply
+ * тестирование метода apply , который бл использован для StringBuilder
  */
 internal class HtmlTableTest : StringSpec({
     "createTable.table(1, 2) = '<table><tr><td></td><td></td></tr></table>'" {

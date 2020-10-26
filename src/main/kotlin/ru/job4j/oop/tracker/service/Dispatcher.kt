@@ -5,6 +5,13 @@ import ru.job4j.oop.tracker.Tracker
 import ru.job4j.oop.tracker.model.Item
 import java.util.function.BiConsumer
 
+/**
+ * диспетчер команд, мапа хранит в себе 3 команды
+ * 1адд итем которая принимает Item но срабатывает
+ * только после вызова  inpet command которые возвращают соответствующие значения
+ * так же есть команда вывести весь список
+ * и команда выход из программы
+ */
 object Dispatcher {
     private var commandList: HashMap<Int, BiConsumer<Input, Tracker>> = HashMap()
 

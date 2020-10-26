@@ -1,5 +1,8 @@
 package ru.job4j.lambda
 
+/**
+ * рисуем таблицу с исползованием метода apply
+ */
 class HtmlTable {
     fun table(row: Int, cell: Int): String {
         val table = StringBuilder()

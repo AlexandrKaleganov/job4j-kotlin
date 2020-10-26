@@ -3,6 +3,9 @@ package ru.job4j.safe.ifelse
 import java.lang.StringBuilder
 import java.time.LocalDate
 
+/**
+ * элвис ?   ""  проверка на налл через '?'
+ */
 data class Purchase(var name: String, var created: LocalDate, var address: Address? = null) {
 }
 

@@ -2,6 +2,9 @@ package ru.job4j.safe
 
 import java.time.LocalDate
 
+/**
+ *    other as Action  equals and hashCode
+ */
 class Action(var valuta: String, date: LocalDate, var name: String? = null) {
 
     override fun equals(other: Any?): Boolean {

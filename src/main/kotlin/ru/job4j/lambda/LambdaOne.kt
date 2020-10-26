@@ -1,5 +1,8 @@
 package ru.job4j.lambda
 
+/**
+ * пример написания функция и хранение их в переменных
+ */
 import kotlin.math.pow
 
     val inc = { x: Int -> x + 1 }
